@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  pytrain_server:
+    image: tensorflow_serving:master
+    environment:
+      - MODEL_NAME=DNN
+      - MODEL_BASE_PATH=/train_customEstimator/Outputs
+    volumes:
+      - /Users/apple/Documents/git-repos/train_customEstimator/Outputs/DNN:/train_customEstimator/Outputs/DNN
+    ports:
+      - 8500:8500
+      - 8501:8501
+    command: 
+      - bash
+      - activateServer
+     

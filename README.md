@@ -29,6 +29,30 @@ It should give a result similar to this:
 }
 ```
 
+When the model is updated a new one, a status would like this:
+```
+{
+    "model_version_status": [
+        {
+            "version": "1597757765",
+            "state": "AVAILABLE",
+            "status": {
+                "error_code": "OK",
+                "error_message": ""
+            }
+        },
+        {
+            "version": "1597737426",
+            "state": "END",
+            "status": {
+                "error_code": "OK",
+                "error_message": ""
+            }
+        }
+    ]
+}
+```
+
 
 To check the metadata, do `curl http://localhost:8501/v1/models/DNN/metadata`
 
@@ -46,8 +70,7 @@ To get a prediction, POST on `http://localhost:8501/v1/models/DNN:predict`:
         "usertag"       : [[0,1,2]],
         "adexchange"    : [[0]],
         "weekday"       : [[0]],
-        "slotheight"    : [[0]],
-        "click"         : [[0]]
+        "slotheight"    : [[0]]
     }
 }
 ```
@@ -56,7 +79,7 @@ An example output would be:
 ```
 {
     "outputs": [
-        0.765822589
+        0.198998734
     ]
 }
 ```

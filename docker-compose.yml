@@ -9,8 +9,8 @@ services:
     volumes:
       - /Users/apple/Documents/git-repos/train-custom-tfestimator/outputs/DNN:/train_custom_tfestimator/outputs/DNN
     ports:
-      - 8500:8500
-      - 8501:8501
+      - "8500:8500"
+      - "8501:8501"
     command: 
       - bash
       - activateServer

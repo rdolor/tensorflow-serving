@@ -29,7 +29,7 @@ It should give a result similar to this:
 }
 ```
 
-When the model is updated a new one, a status would like this:
+When the model is updated with a new one, the status would look like this:
 ```
 {
     "model_version_status": [
